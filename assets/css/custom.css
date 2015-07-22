@@ -107,6 +107,61 @@ body { padding-top: 50px; }
 
 
 
+/* TYPOGRAPHY
+**************************************************************/
+
+/* Base */
+body {
+  font-size: 1rem;
+  line-height: 1.6875rem;
+  color: #333;
+  }
+
+p {
+  font-size: 1rem;
+  margin: 0 0 1.6875rem;
+}
+
+
+/* Font */
+body,
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+
+/* Heading */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  }
+
+
+/* Modular scale - Silver ratio */
+.jumbotron h1,
+.jumbotron .h1 { font-size: 3.998rem; }
+h1,h1 a { font-size: 2.827rem; }
+h2,h2 a { font-size: 1.999rem; }
+h3,h3 a { font-size: 1.414rem; }
+h4,h4 a { font-size: 1rem; }
+h5,h5 a { font-size: 0.707rem; }
+h6,h6 a { font-size: 0.5rem; }
+
+
+.lead,
+.jumbotron .lead {
+  font-size: 1.625rem;
+}
+
+.byline {
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: #999;
+}
+
+
+
+
 /* LINKS & BUTTONS
 **************************************************************/
 a, a:visited, a:focus { color: #333; }
@@ -153,16 +208,21 @@ a:active { color: #0099CC; }
 .navbar-brand {
   font-size: 1.125rem;
   line-height: 1.25rem;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
   }
-  .site-logo {
+
+  .navbar-brand .site-logo {
     width: 20px;
     height: auto;
     float: left;
     border-radius: 3px;
     margin-right: 6px;
-  }
+    }
+
+  .navbar-brand .site-title {
+    color: #333;
+    }
 
 
 /* Navbar */
@@ -265,61 +325,6 @@ a:active { color: #0099CC; }
 
 
 
-/* TYPOGRAPHY
-**************************************************************/
-
-/* Base */
-body {
-  font-size: 1rem;
-  line-height: 1.6875rem;
-  color: #333;
-  }
-
-p {
-  font-size: 1rem;
-  margin: 0 0 1.6875rem;
-}
-
-
-/* Font */
-body,
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-
-/* Heading */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  }
-
-
-/* Modular scale - Silver ratio */
-.jumbotron h1,
-.jumbotron .h1 { font-size: 3.998rem; }
-h1,h1 a { font-size: 2.827rem; }
-h2,h2 a { font-size: 1.999rem; }
-h3,h3 a { font-size: 1.414rem; }
-h4,h4 a { font-size: 1rem; }
-h5,h5 a { font-size: 0.707rem; }
-h6,h6 a { font-size: 0.5rem; }
-
-
-.lead,
-.jumbotron .lead {
-  font-size: 1.625rem;
-}
-
-.byline {
-  font-size: 1.25rem;
-  font-weight: 200;
-  color: #999;
-}
-
-
-
-
 /* JUMBOTRON
 **************************************************************/
 
@@ -366,6 +371,7 @@ h6,h6 a { font-size: 0.5rem; }
   width: 24px;
   height: 24px;
   float: left;
+  margin-top: 4px;
   margin-right: 9px;
   border-radius: 100%;
 }
@@ -624,7 +630,7 @@ a.carousel-control,
 /* META */
 .post-list .post-meta,
 .post-list .post-meta a {
-  font-size: 0.94rem;
+  font-size: 0.875rem;
   color: #7e878c;
   }
 
