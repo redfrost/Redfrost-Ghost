@@ -1,12 +1,14 @@
+/* @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,700); */
+
 /* GLOBAL
 **************************************************************/
 
 @charset "utf-8";
 html {
   font-size: 18px;
-/*-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-  -webkit-font-smoothing: subpixel-antialiased; /* Safari text fix */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+/* -webkit-font-smoothing: subpixel-antialiased; /* Safari text fix */
   }
 
 
@@ -50,7 +52,7 @@ img { max-width: 100%; height: auto; -ms-interpolation-mode: bicubic; } /* max-w
 .last-child, .last-item { margin-right: 0 !important; }
 .highlight { background: #ff0; }
 .hide { display: none !important; }
-.lighter { font-weight: 200; }
+.lighter { font-weight: 300; }
 div { word-wrap: break-word; }
 
 
@@ -134,6 +136,7 @@ h1, h2, h3, h4, h5, h6,
 /* Heading */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  letter-spacing: -0.05rem;
   }
 
 
@@ -151,11 +154,12 @@ h6,h6 a { font-size: 0.5rem; }
 .lead,
 .jumbotron .lead {
   font-size: 1.625rem;
+  font-weight: 300;
 }
 
 .byline {
   font-size: 1.25rem;
-  font-weight: 200;
+  font-weight: 300;
   color: #999;
 }
 
@@ -682,4 +686,5 @@ a.carousel-control,
   margin-right: auto;
 }
 */
+
 
