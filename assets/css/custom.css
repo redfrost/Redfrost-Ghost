@@ -112,7 +112,7 @@ body { padding-top: 50px; }
 a, a:visited, a:focus { color: #333; }
 a:hover { color: #337AB7; }
 a:active { color: #0099CC; }
-
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger { color: #fff !important; }
 
 
 
