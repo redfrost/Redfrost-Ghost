@@ -136,13 +136,17 @@ h1, h2, h3, h4, h5, h6,
 /* Heading */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  letter-spacing: -0.05rem;
+  letter-spacing: -0.04rem;
   }
 
 
 /* Modular scale - Silver ratio */
-.jumbotron h1,
-.jumbotron .h1 { font-size: 3.998rem; }
+@media (min-width: 768px) {
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 3.998rem;
+  }
+}
 h1,h1 a { font-size: 2.827rem; }
 h2,h2 a { font-size: 1.999rem; }
 h3,h3 a { font-size: 1.414rem; }
@@ -213,12 +217,11 @@ a:active { color: #0099CC; }
   font-size: 1.125rem;
   line-height: 1.25rem;
   font-weight: bold;
-  text-transform: uppercase;
   }
 
   .navbar-brand .site-logo {
-    width: 20px;
-    height: auto;
+    width: 22px;
+    height: 22px;
     float: left;
     border-radius: 3px;
     margin-right: 6px;
@@ -226,6 +229,7 @@ a:active { color: #0099CC; }
 
   .navbar-brand .site-title {
     color: #333;
+    letter-spacing: -0.04rem;
     }
 
 
@@ -256,7 +260,7 @@ a:active { color: #0099CC; }
   border: 0;
   border-radius: 0;
   height: 34px;
-  padding: 8px 5px;
+  padding: 0;
 }
 
 /* Toggle Button Animation X */
@@ -335,7 +339,7 @@ a:active { color: #0099CC; }
 .jumbotron {
   color: #fff;
   text-align: center;
-  padding: 100px 0;
+  padding: 40px 0;
   background-color: #6F5499;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.40);
   }
@@ -344,7 +348,7 @@ a:active { color: #0099CC; }
     color: rgba(255,255,255,0.9);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.50);
     }
-
+  .jumbotron .post-title { margin-top: 0; }
   .jumbotron a { color: #fff; }
 
 
@@ -353,6 +357,10 @@ a:active { color: #0099CC; }
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+@media (min-width: 768px) {
+  .jumbotron { padding: 120px 0; }
 }
 
 
@@ -446,6 +454,28 @@ a:active { color: #0099CC; }
   display: block;
   }
   .pagination a { color: #aaa; }
+
+
+/* Responsive */
+  @media (max-width: 767px) {
+    .author {
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      }
+    .author p,
+    .read-next-desc {
+      font-size: 0.75rem;
+      line-height: normal;
+      }
+    .share {
+      width: 100%;
+      text-align: center;
+      }
+  }
+
+
+
 
 
 
@@ -572,6 +602,9 @@ a:active { color: #0099CC; }
     margin: 14px 0;
     padding: 0;
     }
+  .subscribe {
+    display: block;
+  }
 }
 
 
