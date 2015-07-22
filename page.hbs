@@ -1,0 +1,44 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+  attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+
+{{! Jumbotron }}
+<div class="jumbotron main-header {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-12 scroll-fade">
+        <h1 class="post-title">{{title}}</h1>
+      </div><!-- /.col-sm-12 -->
+
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</div><!-- /.jumbotron -->
+
+
+<!-- Article -->
+<div class="content container page-layout">
+  <div class="row">
+
+
+  <main class="main col-sm-12" role="main">
+    <article class="{{post_class}}">
+
+      <section class="post-content">
+        {{content}}
+      </section>
+
+    </article>
+  </main>
+
+
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+{{/post}}
+

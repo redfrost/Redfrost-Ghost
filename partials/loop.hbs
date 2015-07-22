@@ -1,0 +1,40 @@
+{{! Post List }}
+{{#foreach posts}}
+<article class="{{post_class}} post-list">
+
+<!-- Thumbnail
+{{#if image}}
+  <div class="media-left pull-left">
+  <a href="{{url}}">
+    <img class="img-responsive post-thumbnail" src="{{image}}">
+  </a>
+  </div>
+{{/if}}
+-->
+
+  <!-- List-content -->
+  <div class="media-body">
+
+    <header class="post-header">
+      <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
+    </header>
+
+    <section class="post-excerpt">
+      <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo; Read More</a></p>
+    </section>
+
+    <footer class="post-meta">
+      {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
+      {{author}} &middot; <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+      {{tags prefix=" &middot; "}}
+    </footer>
+
+  </div><!-- /.media-body-->
+
+</article>
+{{/foreach}}
+
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}
+

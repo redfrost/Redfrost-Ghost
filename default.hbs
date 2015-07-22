@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" class="no-js"><!-- Modernizr JS detection -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  {{!
+  |~)[~|~\|~|~)/~\(~~|~
+  |~\[_|_/|~|~\\_/_) |
+  When you look into an abyss, the abyss also looks into you.
+  }}
+
+  {{! Page Meta }}
+  <title>{{meta_title}}</title>
+  <meta property="og:site_name" content="{{@blog.title}}" />
+  <meta property="og:url" content="{{@blog.url}}" />
+  <meta property="og:description" name="description" content="{{meta_description}}" />
+  <meta name="twitter:card" content="summary"/>
+  <meta property="og:image" content="{{@blog.logo}}" />
+
+  {{! Author }}
+  <meta name="author" content="{{author.name}}">
+  <meta name="designer" content="Redfrost.com">
+  <meta name="dcterms.rightsHolder" content="(c) {{@blog.title}}">
+
+  {{! Icons }}
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+  <link rel="apple-touch-icon-precomposed" href="{{@blog.logo}}">
+
+  {{! Mobile }}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{! Styles'n'Scripts }}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
+
+  {{! Ghost outputs important style and meta data with this tag }}
+  {{ghost_head}}
+</head>
+
+
+<body id="top" class="{{body_class}}">
+<div class="master-wrap">
+
+
+  {{! Navigation }}
+  {{navigation}}
+
+
+  {{! Contents }}
+  {{{body}}}
+
+
+  {{! Footer }}
+  <footer class="site-footer clearfix" role="contentinfo">
+    <hr class="divider">
+    <div class="container">
+
+      {{! Ghost outputs important scripts and data with this tag }}
+      {{ghost_foot}}
+
+      <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a> All rights reserved.
+      <a class="subscribe" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i> <span>Subscribe</span></a>
+      </section>
+
+      <section class="back-top"><a href="#top"><i class="fa fa-chevron-up"></i> <span>Back to top</span></a></section>
+    </div>
+  </footer>
+
+
+</div><!-- /.master-wrap -->
+
+
+  {{! Scripts }}
+  <script type="text/javascript" src="{{asset "js/modernizr.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/custom.js"}}"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+
+  <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/ie.css"}}" />
+    <script src="{{asset "js/ie.js"}}"></script>
+
+    <div class="ie-warning alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    You are using an <strong>outdated</strong> browser. Please <a href="http://www.whatbrowser.org/">upgrade your browser</a> to improve your experience.</div>
+  <![endif]-->
+
+
+</body>
+</html>
+
+
+

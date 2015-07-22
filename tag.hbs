@@ -1,0 +1,43 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! If we have a tag cover, display that - else blog cover - else nothing }}
+
+{{! Jumbotron }}
+<div class="jumbotron main-header {{#if tag.image}}" style="background-image: url({{tag.image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-sm-12 scroll-fade">
+        <h1 class="page-title">{{tag.name}}</h1>
+        <p class="lead">
+        {{#if tag.description}}
+        {{tag.description}}
+        {{else}}
+          A {{pagination.total}}-post collection
+        {{/if}}
+        </p>
+      </div><!-- /.col-sm-12 -->
+
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</div><!-- /.jumbotron -->
+
+
+{{! Contents }}
+<div class="content container">
+  <div class="row">
+
+
+    {{! Main }}
+    <main class="main col-sm-12" role="main">
+
+      <div class="page-content">
+      {{> "loop"}}
+      </div><!-- /.page-content -->
+
+    </main><!-- /.main -->
+
+
+  </div><!-- /.row -->
+</div><!-- /.container -->
