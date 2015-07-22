@@ -54,12 +54,17 @@
 
             <div class="media-body">
 
-              <h4 class="media-heading"><span class="attr">Written by</span> <a href="{{url}}">{{name}}</a></h4>
-              <p>
-                {{#if bio}}{{bio}}{{else}}Read <a href="{{url}}">more posts</a> by this author.{{/if}} <br>
+              <h4 class="media-heading">
+                <span class="attr">Written by</span>
+                <a href="{{url}}">{{name}}</a>
+              </h4>
+
+              <p>{{#if bio}}{{bio}}{{else}}
+                Read <a href="{{url}}">more posts</a> by this author.{{/if}} <br>
+
                 <small>
                 {{#if location}}From {{location}} &middot;{{/if}}
-                {{#if website}} <a href="{{website}}">{{website}}</a></span>{{/if}}
+                {{#if website}} <a href="{{website}}">{{website}}</a>{{/if}}
                 </small>
               </p>
             </div><!-- /.media-body -->
@@ -119,8 +124,9 @@
             <small>{{excerpt words="19"}}&hellip;</small>
           </section>
         </a>
-      {{/next_post}}
       </div>
+      {{/next_post}}
+
     </aside>
 
 
