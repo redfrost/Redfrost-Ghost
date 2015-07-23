@@ -6,9 +6,8 @@
 {{! Everything inside the #post tags pulls data from the page }}
 {{#post}}
 
-
 {{! Jumbotron }}
-<div class="jumbotron main-header {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+<div class="jumbotron main-header {{#if image}}" style="background-image: url({{image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
   <div class="container">
     <div class="row">
 
