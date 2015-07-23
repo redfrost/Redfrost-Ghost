@@ -65,24 +65,6 @@ jQuery(document).ready(function() {
   });
 
 
-// Syntax Highlighting
-  $( 'pre' ).addClass( 'prettyprint' );
-  $("pre[class=prettyprint]").each( function() {
-    if ( ($(this).html().split(/\n/).length-1) > 3 ) {
-        $(this).addClass( 'linenums' );
-    }
-  });
-
-
-  // Syntax Highlighting
-  $( 'pre' ).addClass( 'prettyprint' );
-  $("pre[class=prettyprint]").each( function() {
-    if ( ($(this).html().split(/\n/).length-1) > 3 ) {
-      $(this).addClass( 'linenums' );
-    }
-  });
-
-
 // End
 });
 
