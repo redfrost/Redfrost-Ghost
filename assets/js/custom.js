@@ -33,7 +33,16 @@ jQuery(document).ready(function() {
 
   // Smooth Scroll
   $('.navbar-fixed-top a').smoothScroll({offset: -73 });
+  $('.submenu a').smoothScroll({offset: -73 });
   $('.back-top a').smoothScroll({offset: -100 });
+
+
+  // Submenu Affix
+  $('.submenu').affix({ offset: {
+      top: 320,
+      bottom: null
+    }
+  });
 
 
   // Scroll fade

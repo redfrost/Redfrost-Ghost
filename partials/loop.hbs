@@ -16,7 +16,7 @@
   <div class="media-body">
 
     <header class="post-header">
-      <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
+      <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
     </header>
 
     <section class="post-excerpt">
@@ -24,7 +24,7 @@
     </section>
 
     <footer class="post-meta">
-      {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" />{{/if}}
+      {{#if author.image}}<a href="{{author.url}}"><img class="author-thumb" src="{{author.image}}" alt="Author image" nopin="nopin" /></a>{{/if}}
       {{author}} &middot; <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
       {{tags prefix=" &middot; "}}
     </footer>

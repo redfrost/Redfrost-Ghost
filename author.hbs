@@ -15,7 +15,7 @@
       <div class="col-sm-12 scroll-fade">
         {{#if image}}
         <figure class="author-image">
-          <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
+          <a href="{{url}}"><img class="author-thumb" src="{{image}}" alt="Author image" nopin="nopin" /></a>
         </figure>
         {{/if}}
 
@@ -23,9 +23,9 @@
         {{#if bio}}<p class="lead author-bio">{{bio}}</p>{{/if}}
 
         <div class="post-meta author-meta">
-          {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-          {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-          <span class="author-stats"><i class="icon-stats"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+          {{#if location}}<i class="fa fa-map-marker"></i> <span class="author-location icon-location">{{location}}</span>{{/if}}
+          {{#if website}}<i class="fa fa-external-link"></i> <span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+          <span class="author-stats"><i class="fa fa-align-left"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
         </div>
 
       </div><!-- /.col-sm-12 -->

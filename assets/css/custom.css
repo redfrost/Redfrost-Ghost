@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6,
 /* Heading */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  letter-spacing: -0.04rem;
+  letter-spacing: -0.0625rem;
   }
 
 
@@ -229,7 +229,7 @@ a:active { color: #0099CC; }
 
   .navbar-brand .site-title {
     color: #333;
-    letter-spacing: -0.04rem;
+    letter-spacing: -0.0625rem;
     }
 
 
@@ -673,8 +673,12 @@ a.carousel-control,
 /* POST LIST
 **************************************************************/
 
-.post-list { margin-bottom: 24px; }
-.post-excerpt p { margin-bottom: 12px; }
+.post-list {
+  margin-bottom: 1.25rem;
+  padding: 0rem 0px 1.25rem;
+}
+.post-list .post-title { margin-top: 0; }
+.post-list .post-excerpt p { margin-bottom: 12px; }
 
 /* META */
 .post-list .post-meta,

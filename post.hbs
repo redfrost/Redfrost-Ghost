@@ -48,7 +48,7 @@
 
             {{#if image}}
             <figure class="media-left author-image">
-              <a href="{{url}}"><img src="{{image}}" alt="{{name}}" /></a>
+              <a href="{{url}}"><img class="author-thumb" src="{{image}}" alt="{{name}}" /></a>
             </figure>
             {{/if}}
 
@@ -105,27 +105,31 @@
 
 {{! Other posts }}
     <aside class="read-next">
-      {{#prev_post}}
+
       <div class="col-sm-6">
+      {{#prev_post}}
         <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
           <section class="read-next-desc">
             <h4 class="left"><span><i class="fa fa-chevron-left"></i> Previous</span> : {{title}}</h4>
             <small>{{excerpt words="19"}}&hellip;</small>
           </section>
         </a>
-      </div>
       {{/prev_post}}
+      </div>
 
-      {{#next_post}}
+
+
       <div class="col-sm-6">
+      {{#next_post}}
         <a class="read-next-story next {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
           <section class="read-next-desc">
             <h4 class="right">{{title}} : <span>Next <i class="fa fa-chevron-right"></i></span></h4>
             <small>{{excerpt words="19"}}&hellip;</small>
           </section>
         </a>
-      </div>
       {{/next_post}}
+      </div>
+
 
     </aside>
 

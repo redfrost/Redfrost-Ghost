@@ -52,13 +52,16 @@
   {{! Footer }}
   <footer class="site-footer clearfix" role="contentinfo">
     <hr class="divider">
+
     <div class="container">
 
       {{! Ghost outputs important scripts and data with this tag }}
       {{ghost_foot}}
 
-      <section class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a> All rights reserved.
-      <a class="subscribe" href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i> <span>Subscribe</span></a>
+      <section class="copyright-box">
+        <p class="copyright">&copy; {{date format="YYYY"}} <a href="/">{{@blog.title}}</a> All rights reserved.</p>
+        <p class="maker"><a href="https://github.com/redfrost/Redfrost-Ghost">Theme</a> created by <a href="https://github.com/redfrost">Redrost</a>.</p>
+        <p class="subscribe"><a href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i> <span>Subscribe</span></a></p>
       </section>
 
       <section class="back-top"><a href="#top"><i class="fa fa-chevron-up"></i> <span>Back to top</span></a></section>
@@ -73,7 +76,7 @@
   <script type="text/javascript" src="{{asset "js/modernizr.js"}}"></script>
   <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
   <script type="text/javascript" src="{{asset "js/custom.js"}}"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+<!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
 
 
   <!--[if lte IE 9]>
