@@ -7,7 +7,7 @@
 {{#post}}
 
 {{! Jumbotron }}
-<div class="jumbotron main-header {{#if image}}" style="background-image: url({{image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+<div class="jumbotron main-header parallax {{#if image}}" style="background-image: url({{image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}" data-type="background" data-speed="-8">
   <div class="container">
     <div class="row">
 
@@ -27,7 +27,7 @@
 
 
 {{! Article }}
-<div class="content container post-layout">
+<div class="content container">
   <div class="row">
 
     <main class="main col-sm-12" role="main">
@@ -36,7 +36,6 @@
         <section class="post-content">
           {{content}}
         </section>
-
 
         <footer class="post-footer">
           <div class="row">
@@ -101,8 +100,15 @@
     </main>
 
 
+  </div><!-- /.row -->
+</div><!-- /.content -->
+
+
 
 {{! Other posts }}
+<div class="widget container">
+  <div class="row">
+
     <aside class="read-next">
 
       <div class="col-sm-6">
@@ -116,8 +122,6 @@
       {{/prev_post}}
       </div>
 
-
-
       <div class="col-sm-6">
       {{#next_post}}
         <a class="read-next-story next {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
@@ -129,12 +133,11 @@
       {{/next_post}}
       </div>
 
-
     </aside>
 
-
   </div><!-- /.row -->
-</div><!-- /.container -->
+</div><!-- /.widget -->
+
 
 
 {{/post}}
