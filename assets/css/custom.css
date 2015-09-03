@@ -22,7 +22,7 @@
 
 @charset "utf-8";
 html {
-	font-size: 18px;
+	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 /* -webkit-font-smoothing: subpixel-antialiased; /* Safari text fix */
@@ -132,7 +132,7 @@ div { word-wrap: break-word; }
 	/* -webkit-transform: translate3d(0, 0, 0); Webkit Hardware Acceleration*/
 	-webkit-backface-visibility: hidden;
 	/* Safari Flicker Fix #2 */
-	-webkit-transform: translateZ(0);
+	/* -webkit-transform: translateZ(0); Chrome bug */
 }
 
 
@@ -468,7 +468,7 @@ a:active {
 	7. POST LIST
 ============================================================== */
 
-.post-list {
+.post-list .post {
 	margin-bottom: 1.6875rem;
 	padding: 0rem 0px 1.6875rem;
 	border-bottom: 1px solid #ebf2f6;
@@ -557,9 +557,14 @@ a:active {
 }
 
 .author p {
-	font-size: 0.88rem;
-	line-height: 1.25rem;
+	font-size: 0.8125rem;
+	line-height: normal;
 	margin: 0;
+}
+
+.author small,
+.author small a {
+  color: #aaa;
 }
 
 
@@ -931,8 +936,9 @@ pre {
 	CUSTOM
 ============================================================== */
 
-@media (max-width: 767px) {
-	html { font-size: 16px; }
+/* Default font */
+@media (min-width: 768px) {
+	html { font-size: 18px; }
 }
 
 /* Layout */
